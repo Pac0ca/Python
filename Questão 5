@@ -1,0 +1,14 @@
+##Questão 05: Uma cidade classifica um índice de poluição menor que 35 como agradável; de 35 até 60 desagradável e acima de 60 perigoso. Escreva um algoritmo em Python que leia um número real representando o índice de poluição e imprime a classificação adequada para ele.
+
+ind=int(input( 'Dé o índice de poluição:'))
+
+if ind < 35 and ind >= 0:
+    print( 'O índice de poluição é agradavel!')
+elif ind >= 35 and ind <= 60:
+    print('O índice de poluição é desagradavel!')
+elif ind > 60:
+    print('O índice de poluição é perigoso!')
+else:
+    print('O valor está anormal ou errado!')
+
+##Simples não tenha muto a dizer sobre esse codigo aqui, usei quase a mesma estrategia da questão anterior.

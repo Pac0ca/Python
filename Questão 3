@@ -1,0 +1,32 @@
+##Questão 03: Escreva um algoritmo em Python que leia 4 valores: P, A, B e C. Se P=1 então calcular a média aritmética de A, B e C e escrever esta média; se P = 2 somar os 3 valores atribuindo este valor a uma variável qualquer e escrevendo esta soma; se P = 3 fazer um teste para saber se B é par, se é par escrever a mensagem e o valor, caso contrário escrever que é ímpar. Se for qualquer outro valor mostrar a mensagem “operação inválida”.
+
+
+
+A = int(input('Dé um valor:'))
+
+B = int(input('Dé um valor:'))
+
+C = int(input('Dé um valor:'))
+
+P = int(input('Dé um valor entre 1 a 3: \n1. caucule a média aritmédica: \n2. Some os valores: \n3. Teste se o segundo valor é par: \n:'))
+
+M = ((A+B+C)/3)
+
+S = (A+B+C)
+
+if P == 1:
+    print(f'A média aritmédia dos valores é: {M:.2f}')
+
+elif P == 2:
+    print(f'A soma dos valores é: {S}')
+
+elif P == 3 and B %2 == 0:
+    print(f'O valor {B} é par!')
+
+elif P == 3 and B %2 != 0:
+    print(f'O valor {B} é impar!')
+
+else:
+    print('Operação invalida!')
+
+##Nessa questão eu percebir que não fazia ideia de como saberia se um numeror erá par ou não, aprendo sempre em, e eu não entendi o porque do codigo dá error quando P tá em primeiro!

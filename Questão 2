@@ -1,0 +1,11 @@
+##Escreva um algoritmo em Python que leia um número real fornecidos pelo usuário e calcule sua raiz quadrada. O programa deve evitar calcular a raiz de um número negativo.
+
+valor = int(input('dé o valor Desejado:'))
+raiz = (valor ** (1/2))
+if valor <= -1:
+    print('Não é possivel caucula o valor pedido!')
+elif valor >= 0:
+    print(f'A raiz do valor pedido é:{raiz:.2f}')
+
+
+ ##Meu primeiro penssamento foi fazer a raiz dentro do IF só que eu percebir que seria bem problematico, então acabei decedindo fazer assim mesmo não perdendo tanta sanidade mental.     

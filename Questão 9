@@ -1,0 +1,110 @@
+##Questão 09: Um hospital precisa de um programa para calcular e imprimir os gastos de um paciente. A tabela de preços do hospital é a seguinte:
+##Escreva um algoritmo em Python que leia o número de dias gastos no hospital um caractere representando o tipo de quarto utilizado (P, C ou E) um caractere indicando se usou ou não o telefone (S ou N), um caractere indicando se usou ou não a televisão (S ou N) e produza a seguinte saída:
+
+Q = int(input('Escolha entre os quartos(Pelos valores): \nParticular(P): 120$ \nConjunto(C): 95$ \nEnfermaria(E): 75$ \n:'))
+SE1 = str(input('Serviços extras: \nTelevisão(S/N): 3,50$ \n:' ))
+SE2 = str(input('Serviços extras: \nTelefone(S/N): 1,75 \n:' ))
+D = int(input('Quantos dias vai ficar:'))
+DF = (Q*D)
+DE1 = (Q*D)*0.05
+DEE =(DF-DE1)
+DE2 = (Q*D)*0.1
+DEE2 = (DF-DE2)
+DE3 = (Q*D)*0.15
+DEE3 = (DF-DE3)
+T1 = (DF + 3.50 + 1.75)
+T2 = (DF + 1.75)
+T3 = (DF + 3.50)
+DE12 = (T1-DE1)
+DE13 = (T1-DE2)
+DE14 = (T1-DE3)
+DE15 = (T2-DE1)
+DE16 = (T2-DE2)
+DE17 = (T2-DE3)
+DE18 = (T3-DE1)
+DE19 = (T3-DE2)
+DE20 = (T3-DE3)
+if Q == 120 and SE1 == 'S' and SE2 == 'S' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE1} \nVAlor pago: {DE12}')
+elif Q == 120 and SE1 == 'N' and SE2 == 'S' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE1} \nVAlor pago: {DE15}')
+elif Q == 120 and SE1 == 'S' and SE2 == 'N' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50 \nTotal: {T3} \nDesconto: {DE1} \nVAlor pago: {DE16}')
+elif Q == 120 and SE1 == 'N' and SE2 == 'N' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE1} \nVAlor pago: {DEE}')
+elif Q == 95 and SE1 == 'S' and SE2 == 'S' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50 \nTotal: {T1} \nDesconto: {DE1} \nVAlor pago: {DE12}')
+elif Q == 95 and SE1 == 'N' and SE2 == 'S' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE1} \nVAlor pago: {DE15}')
+elif Q == 95 and SE1 == 'N' and SE2 == 'N' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE1} \nVAlor pago: {DEE}')
+elif Q == 95 and SE1 == 'S' and SE2 == 'N' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50 \nTotal: {T3} \nDesconto: {DE1} \nVAlor pago: {DEE}')
+elif Q == 75 and SE1 == 'S' and SE2 == 'S' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50 \nTotal: {T1} \nDesconto: {DE1} \nVAlor pago: {DE12}')
+elif Q == 75 and SE1 == 'S' and SE2 == 'N' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50 \nTotal: {T2} \nDesconto: {DE1} \nVAlor pago: {DE15}')   
+elif Q == 75 and SE1 == 'N' and SE2 == 'S' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T3} \nDesconto: {DE1} \nVAlor pago: {DE18}')
+elif Q == 75 and SE1 == 'N' and SE2 == 'N' and DF <= 500:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE1} \nVAlor pago: {DEE}')
+elif Q == 120 and SE1 == 'S' and SE2 == 'S' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE2} \nVAlor pago: {DE13}')
+elif Q == 120 and SE1 == 'S' and SE2 == 'N' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50$ \nTotal: {T2} \nDesconto: {DE2} \nVAlor pago: {DE19}')
+elif Q == 120 and SE1 == 'N' and SE2 == 'S' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T3} \nDesconto: {DE2} \nVAlor pago: {DE16}')
+elif Q == 120 and SE1 == 'N' and SE2 == 'N' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {T3} \nDesconto: {DF} \nVAlor pago: {DE2}')
+elif Q == 95 and SE1 == 'S' and SE2 == 'S' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE2} \nVAlor pago: {DE13}')
+elif Q == 95 and SE1 == 'S' and SE2 == 'N' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50$ \nTotal: {T3} \nDesconto: {DE2} \nVAlor pago: {DE19}')
+elif Q == 95 and SE1 == 'N' and SE2 == 'S' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE2} \nVAlor pago: {DE16}')
+elif Q == 95 and SE1 == 'N' and SE2 == 'N' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE2} \nVAlor pago: {DE2}')
+elif Q == 75 and SE1 == 'S' and SE2 == 'S' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE2} \nVAlor pago: {DE13}')
+elif Q == 75 and SE1 == 'S' and SE2 == 'N' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50$ \nTotal: {T3} \nDesconto: {DE2} \nVAlor pago: {DE19}')
+elif Q == 75 and SE1 == 'N' and SE2 == 'S' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE2} \nVAlor pago: {DE16}')
+elif Q == 75 and SE1 == 'N' and SE2 == 'N' and DF > 500 and DF <= 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Enfermaria \nDiarias: {DF} \nTelefone: ,0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE2} \nVAlor pago: {DEE2}')
+elif Q == 120 and SE1 == 'S' and SE2 == 'S' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE3} \nVAlor pago: {DE14}')
+elif Q == 120 and SE1 == 'S' and SE2 == 'N' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50$ \nTotal: {T3} \nDesconto: {DE3} \nVAlor pago: {DE20}')
+elif Q == 120 and SE1 == 'N' and SE2 == 'S' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE3} \nVAlor pago: {DE17}')
+elif Q == 120 and SE1 == 'N' and SE2 == 'N' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Particular \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE3} \nVAlor pago: {DEE3}')
+elif Q == 95 and SE1 == 'S' and SE2 == 'S' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE3} \nVAlor pago: {DE14}')
+elif Q == 95 and SE1 == 'S' and SE2 == 'N' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50$ \nTotal: {T3} \nDesconto: {DE3} \nVAlor pago: {DE20}')
+elif Q == 95 and SE1 == 'N' and SE2 == 'S' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE3} \nVAlor pago: {DE17}')
+elif Q == 95 and SE1 == 'N' and SE2 == 'N' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Conjunto \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE3} \nVAlor pago: {DEE3}')
+elif Q == 75 and SE1 == 'S' and SE2 == 'S' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Efermaria \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 3,50$ \nTotal: {T1} \nDesconto: {DE3} \nVAlor pago: {DE14}')
+elif Q == 75 and SE1 == 'S' and SE2 == 'N' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Efermaria \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 3,50$ \nTotal: {T3} \nDesconto: {DE3} \nVAlor pago: {DE20}')
+elif Q == 75 and SE1 == 'N' and SE2 == 'S' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Efermaria \nDiarias: {DF} \nTelefone: 1,75$ \nTelevisão: 0,00 \nTotal: {T2} \nDesconto: {DE3} \nVAlor pago: {DE17}')
+elif Q == 75 and SE1 == 'N' and SE2 == 'N' and DF > 1000:
+    print(f'Diaria:{D} \nTipo de quarto: Efermaria \nDiarias: {DF} \nTelefone: 0,00 \nTelevisão: 0,00 \nTotal: {DF} \nDesconto: {DE3} \nVAlor pago: {DEE3}')
+else:
+    print('Valores incorretos!')
+
+
+
+
+
+
+
+## Eu acho que quase enloqueci nessa questão, ela demorou mais que todas as outras juntas! dor, apenas dor. Foi um trabalho braçal gigantesco, na anterior eu disse que usei muitos vetores mas nessa.... foi um absurdo! de qualquer forma deu certo de primeira obrigado deus!!!!
+    
+## Basicamente todas as minhas respostas vieram dos vetores eu criei um pra cada coisa que tinha cada variavel, como eu tinha dito foi um trabalho gigantesco e eu acredito que até detalhado de mais.

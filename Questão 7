@@ -1,0 +1,20 @@
+##Questão 07: Uma loja que trabalha com crediário funciona da seguinte maneira: se o pagamento ocorre até o dia do vencimento, o cliente ganha 10% de desconto e é avisado que o pagamento está em dia. Se o pagamento é realizado até cinco dias após o vencimento o cliente perde o desconto, e se o pagamento atrasa mais de cinco dias, é cobrada uma multa de 2% por cada dia de atraso. Faça um programa que lê o dia do vencimento, o dia do pagamento e o valor da prestaçãoe calcule o valor a ser pago pelo cliente, exibindo as devidas mensagens. suponha que todo vencimento ocorre até o dia dez de cada mês e os clientes nunca deixam para pagar no mês seguinte.
+
+DP = int(input('informe o dia do pagamento:'))
+P = int(input('Informe o valor do pagamento:'))
+D = (P*0.1)
+D2= (P-D)
+C =(P*0.02)
+C2=(P+C)
+
+if DP <= 10 and DP >= 0:
+    print(f"Pagamento em dia, recebe 10% '{D:.2f}' de desconto: {D2}")
+elif DP <= 15 and DP > 10:
+    print('Pagamento efetuado sem desconto!')
+elif DP >= 16 and DP <= 31:
+    print(f'Pagamento efetuado com atraso, multa de {C} assim o preço sobe para: {C2}')
+else:
+    print('O dia inserido não é permitido!')
+
+
+## Lembrar da porcentagem é complicado, mas de qualquer forma deu certo! Não sei se é a forma mais efeciente criar esse tanto de vetores mas é a forma que eu aprendi até agora. 

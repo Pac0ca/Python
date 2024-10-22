@@ -1,0 +1,23 @@
+##Escreva um algoritmo em Python que leia um caractere do teclado e forneça na tela uma das seguintes mensagens:
+
+T = str(input( 'Digite entre os seguintes caracteres \na,A \nc,C \ne,E \ni,I \nf,F \nTecla:'))
+
+if T == 'A' or T == 'a':
+    print('Alteração')
+
+elif T == 'C' or T == 'c':
+    print('Consulta')
+
+elif T == 'E' or T == 'e':
+    print('Exclusão')
+
+elif T == 'i' or T == 'I':
+    print('Inclusão')
+
+elif T == 'F' or T =='f':
+    print('Finalização')
+
+else:
+    print('Opção inválida!')
+
+## Essa até que foi de boa, só demorei para descobrir que eu tinha que por T =='C' or T == 'c' e não T == 'C' or 'c' ainda bem que tem os colegas de clase 

@@ -1,0 +1,24 @@
+##Questão 02: Escreva um algoritmo em Python que leia um inteiro N e uma sequência de N números inteiros, e imprime a soma dos números pares da sequência lida.
+
+
+n1 = int(input('Informe um numero inteiro:'))
+n2 = int(input('Informe outro numero inteiro:'))
+n3 = int(input('Informe outro numero inteiro:'))
+
+
+if n1 %2 == 0  and n2 % 2 == 0 and n3 % 2 == 0:
+    print(f"Os valores pares são:{n1},{n2},{n3}.")
+elif n1 %2 == 0 and n2 %2 == 0:
+   print(f"Os valores pares são:{n1},{n2}.") 
+elif n1 %2 == 0:
+   print(f"O valor par é:{n1}.") 
+elif n2 %2 == 0:
+   print(f"O valor par é:{n2}.")
+elif n3 %2 == 0:
+   print(f"O valor par é:{n3}.")
+elif n2 %2 == 0 and n3 %2 == 0:
+   print(f"Os valores pares são:{n2},{n3}.")
+elif n1 %2 == 0 and n3 %2 == 0:
+   print(f"Os valores pares são:{n1},{n3}.")
+else:
+    print('Não á valores pares!')

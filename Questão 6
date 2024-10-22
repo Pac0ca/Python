@@ -1,0 +1,18 @@
+##Questão 06: Escreva um algoritmo em Python que leia 3 números inteiros e verifique se estes podem formar um triângulo, ou seja, a soma de dois lados tem que ser necessariamente maior que o terceiro lado. Caso os valores formem um triângulo, verificar se é um triângulo equilátero (3 lados iguais), isósceles (2 lados iguais) ou escaleno (3 lados diferentes). Imprima uma mensagem conforme o resultado obtido.
+
+n1 = int(input('Dé o da base do triangulo:'))
+n2 = int(input('Dé o 1* lado do triangulo:'))
+n3 = int(input('Dé o 2* lado do triangulo:'))
+T = (n2+n3)
+if n1 > T:
+    print('Os valores não forman um triangulo!')
+elif n1 == n2 and n2 == n3:
+    print('Os valores forman um triangulo equilátero!')
+elif n1 > n2 and n2 == n3 or n2 > n3 and n2 == n3 or n3 > n1 and n1 == n2 or n1 > n2 and n1 == n3 or n1 > n3 and n1 == n2 or n2 > n1 and n2 == n2:
+    print('Os valores forman um triangulo isósceles!')
+elif n1 != n2 and n2 != n3 and n1 != n3:
+    print('Os valores forman um triangulo escaleno!')
+else:
+    print('Algo deu errado')
+
+## Nelhorando ainda mais no uso do AND e as formas de maior, menor, diferente, igual e etc... . No geral foi bem simples essa questão. decedir pedir os valores das partes mais expessificas pois dava menos erros quando pedia para outras pessoas tentarem responder o codigo.
